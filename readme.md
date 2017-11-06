@@ -48,11 +48,11 @@ Styling is a hard area to grade so at a bare minimum you will need to show your 
 
 
 ## Requirements
-  Visualization: 
+ - Visualization: 
     - All songs are rendered when search button is clicked
     - Bootstrap is utilized to provide styling to the page
     - Each property of the song object is displayed (title, artist, price, album art, preview (hint: "html audio tag"))
-   Functionality: 
+  - Functionality: 
     - New search will clear out old results
 
     
