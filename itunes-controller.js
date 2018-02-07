@@ -8,7 +8,8 @@ function ItunesController(){
   }
 
   //Start coding here
-  function draw(){
+  function draw(results){
+    console.log(results)
   }
 
 
