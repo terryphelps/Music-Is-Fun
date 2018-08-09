@@ -4,7 +4,7 @@ import ItunesService from "./itunes-service.js";
 
 const itunesService = new ItunesService()
 
-function draw(results) {
+function drawSongs(results) {
   console.log(results)
   //YOUR CODING STARTS HERE
 
@@ -22,7 +22,7 @@ class ItunesController {
     //changes the button to loading while songs load
     $('#get-music-button').text('LOADING....');
     itunesService.getMusicByArtist(artist).then(results => {
-      draw(results)
+      drawSongs(results)
       //changes button back to GET MUSIC once songs are loaded
       $('#get-music-button').text('GET MUSIC');
     })

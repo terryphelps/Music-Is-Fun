@@ -10,21 +10,12 @@ You are now being tasked with handling the data that comes back from the service
 
 The first thing to focus on will be adding the correct information to the screen. You will be doing this through a `drawSongs` function that will need to be setup in itunes-controller.js
 
-> Your `drawSongs` function will need to accept a parameter of songs maybe call it called `(songList)`
+> Your `drawSongs` function will need to accept a parameter of songs maybe call it called `(results)` 
+**again this has been set up for you**
 
-> The `songList` is an `array` of `objects` where each `object` is a song as illustrated below
+> The `results` is an `array` of `Song` class objects where you will find an example of in the models folder
 
-```javascript
-songList = [{
-  title: 'string - song title',
-  albumArt: 'string - url for song album cover art',
-  artist: 'string - artistName',
-  collection: 'string - album title',
-  price: 'number - price of song',
-  preview: 'string - url will play the song'
-}]
-```
-When the user clicks the `Get Music Button` it runs a function in the `itunes-service.js` once that code is finished it will call a `drawSongs function` and pass in the list of songs requested. Thus you will not need to modify any of the code in the `itunes-service.js` or the `getMusic function` you will however need to create `drawSongs function` and pass it as a callback into the `.then()` statement available in the controller.
+When the user clicks the `Get Music Button` it runs a function in the `itunes-controller.js`  to pass data from the form to `itunes-service.js`  who will retrieve the songs from iTunes, and return them to be mapped to `Song` classes. Once that code is finished it will call a `drawSongs function` and pass in the list of songs requested. Thus you will not need to modify any of the code in the `itunes-service.js` or the `getMusic function` you will however need to finish the `drawSongs function`.
 
 ### Step 1 -  Where is the output?
 
@@ -53,7 +44,7 @@ Styling is a hard area to grade so at a bare minimum you will need to show your 
     - Bootstrap is utilized to provide styling to the page
     - Each property of the song object is displayed (title, artist, price, album art, preview (hint: "html audio tag"))
   - Functionality: 
-    - New search will clear out old results
+    - A new search will clear out old results
 
     
 
@@ -67,4 +58,4 @@ Styling is a hard area to grade so at a bare minimum you will need to show your 
 - When you search you will also get movies, try to filter those out
 
 ### Finished?
-When You are finished please submit the url for your github repo to be graded. You are free to work on this however you like but ultimately it needs to be added to your github.
+When You are finished please submit the url for your github repo to be graded.
