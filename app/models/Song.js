@@ -1,4 +1,4 @@
-export class Song {
+export default class Song {
     constructor(song) {
         this.title = song.trackName
         this.albumArt = song.artworkUrl60
