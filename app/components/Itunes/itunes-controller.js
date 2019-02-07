@@ -1,34 +1,30 @@
 import ItunesService from "./itunes-service.js";
-
-//PRIVATE
-
+//Private
 const itunesService = new ItunesService()
 
-function drawSongs(results) {
-  console.log(results)
-  //YOUR CODING STARTS HERE
-
-
+function drawSongs() {
+  //changes button back to GET MUSIC once songs are loaded
+  document.querySelector('#get-music-button').textContent = 'GET MUSIC'
+  console.log(itunesService.Songs)
 
 }
 
 
 //PUBLIC
 class ItunesController {
+  constructor() {
+    //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
+  }
+
+
   //DO NOT MODIFY THIS METHOD
   getMusic(e) {
     e.preventDefault();
     var artist = e.target.artist.value;
     //changes the button to loading while songs load
-    $('#get-music-button').text('LOADING....');
-    itunesService.getMusicByArtist(artist).then(results => {
-      drawSongs(results)
-      //changes button back to GET MUSIC once songs are loaded
-      $('#get-music-button').text('GET MUSIC');
-    })
+    document.querySelector('#get-music-button').textContent = 'LOADING....'
+    itunesService.getMusicByArtist(artist)
   }
-
-
 }
 
 
