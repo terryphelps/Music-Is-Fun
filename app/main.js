@@ -1,4 +1,4 @@
-import ItunesController from "./app/components/Itunes/itunes-controller.js";
+import ItunesController from "./components/Itunes/itunes-controller.js";
 
 
 class App {
@@ -9,4 +9,4 @@ class App {
   }
 }
 
-window.app = new App()
+window["app"] = new App()
