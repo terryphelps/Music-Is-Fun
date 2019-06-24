@@ -1,19 +1,14 @@
-
-
+body{
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(https://i.stack.imgur.com/jGlzr.png);
+}
 #songs {
   justify-content: center;
-  margin-left: 1em
+  margin-left: 1em;
 }
-header {
-  display: flexbox;
-  flex-direction: row;
-  justify-content: center;
-  background-color: aquamarine;
+#row1 {
+  justify-content: space-evenly;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
-/*#  body {
-  display: flexbox;
-  flex-direction: row;
-  justify-content: center;
-}
-}*/
